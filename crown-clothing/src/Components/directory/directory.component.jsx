@@ -6,10 +6,10 @@ import {connect} from 'react-redux';
 import './directory.styles.scss';
 
 
-const Directory = ({ sections }) => (
+const Directory = ({ sections, match }) => (
 			 <div className='directory-menu'>
-				{sections.map(({title, imageUrl, id, size}) => 
-			 		<MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/> )}
+				{sections.map(({id, ...otherSectionProps}) => 
+			 		<MenuItem key={id} {...otherSectionProps}/> )}
 			 </div>
 		);
 

@@ -4,8 +4,8 @@ import { selectCollection } from '../../redux/shop/shop.selectors';
 import CollectionItem from '../../Components/collection-item/collection-item.component';
 import './collection.styles.scss';
 
-const CollectionPage = ({collection}) => {
-    const {items, title} = collection;
+const CollectionPage = ({ collection, match }) => {
+    const {title, items} = collection;
     return (
         <div className='collection-page'>
             <h2 className='title'>{title}</h2>
@@ -15,7 +15,7 @@ const CollectionPage = ({collection}) => {
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
 
